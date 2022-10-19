@@ -1,0 +1,102 @@
+package it.daniele;
+
+import java.io.IOException;
+import java.io.Writer;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class PrimaServlet extends HttpServlet {
+
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp) 
+            throws ServletException, IOException {
+        
+        Writer w = resp.getWriter();
+        
+        w.write("<!DOCTYPE html>\r\n"
+        		+ "<html>\r\n"
+        		+ "<head>\r\n"
+        		+ "<style>\r\n"
+        		+ "body {\r\n"
+        		+ "  font-size: 28px;\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ "ul {\r\n"
+        		+ "  list-style-type: none;\r\n"
+        		+ "  margin: 0;\r\n"
+        		+ "  padding: 0;\r\n"
+        		+ "  overflow: hidden;\r\n"
+        		+ "  background-color: #333;\r\n"
+        		+ "  position: -webkit-sticky; /* Safari */\r\n"
+        		+ "  position: sticky;\r\n"
+        		+ "  top: 0;\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ "li {\r\n"
+        		+ "  float: left;\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ "li a {\r\n"
+        		+ "  display: block;\r\n"
+        		+ "  color: white;\r\n"
+        		+ "  text-align: center;\r\n"
+        		+ "  padding: 14px 16px;\r\n"
+        		+ "  text-decoration: none;\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+"footer {\r\n"
+        		+ "  text-align: center;\r\n"
+        		+ "  padding: 3px;\r\n"
+        		+ "  background-color:  #333;\r\n"
+        		+ "  color: red;\r\n"
+        		+ "}"
+        		+ "li a:hover {\r\n"
+        		+ "  background-color: #111;\r\n"
+        		+ "}\r\n"
+        		+ "\r\n"
+        		+ ".active {\r\n"
+        		+ "  background-color: #FF0000;\r\n"
+        		+ "}\r\n"
+        		+ "</style>\r\n"
+        		+ "</head>\r\n"
+        		+ "<body>\r\n"
+        		+ "\r\n"
+        		+ "<div class	=\"header\">\r\n"
+        		+ "  <h2 >SCORRI IN BASSO PER VISUALIZZARE LE INFORMAZIONI</h2>\r\n"
+        		+ "  \r\n"
+        		+ "</div>\r\n"
+        		+ "\r\n"
+        		+ "<ul>\r\n"
+        		+ "  <li><a class=\"active\" href=\"#home\">Home</a></li>\r\n"
+        		+ "  <li><a href=\"#news\">News</a></li>\r\n"
+        		+ "  <li><a href=\"#contact\">Contact</a></li>\r\n"
+        		+ "</ul>\r\n"
+        		+ "\r\n"
+        		+ "<h3>Sticky Navigation Bar Example</h3>\r\n"
+        		+ "<p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>\r\n"
+        		+ "<p><strong>Note:</strong> Internet Explorer do not support sticky positioning and Safari requires a -webkit- prefix.</p>\r\n"
+        		+ "<p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>\r\n"
+        		+ "<p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>\r\n"
+        		+ "<p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>\r\n"
+     
+        		+ "\r\n"
+        		+ "<footer>\r\n"
+        		+ "  <p>Autore: Daniele Denza<br>\r\n"
+        		+ "  <a href=\"mailto@example.com\">example@example.com</a></p>\r\n"
+        		+ "</footer>"
+        		+ "</body>\r\n"
+        		+ "</html>\r\n"
+        		+ "\r\n"
+        		+ "");
+        w.flush();
+        w.close();
+    }
+	
+	
+}
